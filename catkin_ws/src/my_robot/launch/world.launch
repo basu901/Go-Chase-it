@@ -11,7 +11,7 @@
 	<arg name="yaw" default="0"/>
 
 	<!--Launch other relevant files-->
-	<include files="$(find my_robot)/launch/robot_description.launch"/>
+	<include file="$(find my_robot)/launch/robot_description.launch"/>
 
 	<!--World File-->
 	<arg name="world_file" default="$(find my_robot)/worlds/empty.world"/>
