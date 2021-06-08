@@ -309,6 +309,19 @@ ball_chaser_drive_bot/fast:
 .PHONY : ball_chaser_drive_bot/fast
 
 #=============================================================================
+# Target rules for targets named ball_chaser_process_image
+
+# Build rule for target.
+ball_chaser_process_image: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ball_chaser_process_image
+.PHONY : ball_chaser_process_image
+
+# fast build rule for target.
+ball_chaser_process_image/fast:
+	$(MAKE) -f ball_chaser/CMakeFiles/ball_chaser_process_image.dir/build.make ball_chaser/CMakeFiles/ball_chaser_process_image.dir/build
+.PHONY : ball_chaser_process_image/fast
+
+#=============================================================================
 # Target rules for targets named ball_chaser_gennodejs
 
 # Build rule for target.
@@ -683,6 +696,7 @@ help:
 	@echo "... gtest"
 	@echo "... _catkin_empty_exported_target"
 	@echo "... ball_chaser_drive_bot"
+	@echo "... ball_chaser_process_image"
 	@echo "... ball_chaser_gennodejs"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... ball_chaser_genpy"
