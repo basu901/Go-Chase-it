@@ -44,7 +44,7 @@ void process_image_callback(const sensor_msgs::Image img)
 		if(img.data[i]==white_pixel)
 		{
 			found_ball=true;
-			//ROS_INFO("Found the ball!");
+			ROS_INFO("Found the ball!");
 			pos = i;
 			break;
 		}
@@ -61,6 +61,7 @@ void process_image_callback(const sensor_msgs::Image img)
 		angle = ((col_pos - 0.5*img.width)/(0.5*img.width))*M_PI_2;
 		ROS_INFO("Set the angle at %1.3f",angle);
 	}
+
 	
 	drive_robot(vel,angle);
 
