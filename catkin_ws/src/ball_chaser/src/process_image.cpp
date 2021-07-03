@@ -39,9 +39,9 @@ void process_image_callback(const sensor_msgs::Image img)
 
 	int i,j;
 	
-	for(i = 0;i <img.height*img.step;i++)
+	for(i = 0;i <img.height*img.step;i+=3)
 	{
-		if(img.data[i]==white_pixel)
+		if((img.data[i]==white_pixel)&&(img.data[i+1]==white_pixel)&&(img.data[i+2]==white_pixel))
 		{
 			found_ball=true;
 			//ROS_INFO("Found the ball!");
