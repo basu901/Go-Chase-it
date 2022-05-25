@@ -5,7 +5,7 @@
 	<!--Robot pose-->
 	<arg name="x" default="0.53"/>
 	<arg name="y" default="3.205"/>
-	<arg name="z" default="0.0"/>
+	<arg name="z" default="0.1"/>
 	<arg name="roll" default="0"/>
 	<arg name="pitch" default="0"/>
 	<arg name="yaw" default="0"/>

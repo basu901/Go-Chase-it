@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/workspace/catkin_ws/src/my_robot/build/devel/setup.sh

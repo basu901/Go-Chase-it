@@ -70,6 +70,35 @@
 	</visual>
 	</link>
 
+	<link name="bump_sensor">
+		<collision name="bump_sensor_collision">
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<geometry>
+		<box size="0.065 1.0 0.02"/>
+		</geometry>
+		</collision>
+
+		 <visual>
+      			<origin xyz="0 0 0" rpy="0 0 0"/>
+      			<geometry>
+         			<box size="0.065 1.0 0.02"/>
+      			</geometry>
+    		</visual>
+
+    		<inertial>
+      			<mass value="1e-5" />
+      			<origin xyz="0 0 0" rpy="0 0 0"/>
+      		<inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+    		</inertial>
+  	</link>
+
+	<joint name="bumper_joint" type="fixed">
+		<axis xyz="0 1 0"/>
+		<origin xyz="0.3 0 -0.05" rpy="0 0 0"/>
+		<parent link="chassis"/>
+		<child link="bump_sensor"/>
+	</joint>
+
 	<link name="left_wheel">
 		<inertial>
 		<mass value="5.0"/>
@@ -225,8 +254,9 @@
 		<material>Gazebo/Blue</material>
 	</gazebo>
 
+	<gazebo reference="bump_sensor">
+		<material>Gazebo/Black</material>
+	</gazebo>
 
-
-		
 </robot>
 
