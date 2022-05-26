@@ -142,8 +142,8 @@ list(APPEND CMAKE_CXX_FLAGS "-std=c++11 ${CMAKE_CXX_FLAGS} ${GAZEBO_CXX_FLAGS}")
 # add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-add_library(contact SHARED src/ContactPlugin.cpp)
-target_link_libraries(contact ${GAZEBO_LIBRARIES})
+#add_library(contact SHARED src/ContactPlugin.cpp)
+#target_link_libraries(contact ${GAZEBO_LIBRARIES})
 
 
 #############
